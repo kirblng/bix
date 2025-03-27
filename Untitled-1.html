@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A beautiful animated webpage that expresses love with a heartbeat effect.">
+    <meta name="keywords" content="love, romantic page, I love you, animations">
+    <meta name="author" content="Your Name">
+    <meta name="robots" content="index, follow">
+
+    <title>Love Page</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: pink;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+        h1 {
+            font-size: 3rem;
+            color: red;
+            animation: heartbeat 1.5s infinite, fadeIn 3s ease-in-out;
+            position: relative;
+        }
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        @keyframes floating {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
+        }
+        h1::after {
+            content: " ❤️";
+            display: inline-block;
+            animation: floating 2s infinite ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <h1>I Love You</h1>
+</body>
+</html>
